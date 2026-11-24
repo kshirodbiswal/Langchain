@@ -1,0 +1,6 @@
+__pycache__
+venv
+.env
+requirement.txt
+test.py
+settings.json
