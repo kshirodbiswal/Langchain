@@ -4,3 +4,4 @@ venv
 requirement.txt
 test.py
 settings.json
+.gitignore
