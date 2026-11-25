@@ -1,0 +1,49 @@
+Langchain: It i an open-source framework for developing applications powerd by large language model(llm).
+
+Benifits: 
+ 1.concept of chains: It provides a concept of chain where we can create complex pipelines whereoutput of each section is an input for another section.
+ 2.model agnostic development: It doesnot depend on a specific model. we can use diff models(openAI,gemini etc.)by making a simple change of code of few lines.
+ 3.complete ecosystem: It provides complete ecosystem of all required components for application development.
+ 4.memory and state handeling: It provides memory so tht the model can remember previous conversations.
+
+What we can build:
+ 1.conversetional chatbots
+ 2.AI knowledge assistance
+ 3.AI agents
+ 4.workflow automation
+ 5.summerization
+
+Alternatives: llamaIndex,Heystack
+
+Components of langchain:
+  There are mainly 6 components of langchain.
+  1.Models 
+  2.Prompts
+  3.Chains
+  4.Memory
+  5.Index
+  6.Agent
+
+1.Models: It is the core interface of langchain using which we can communicate with any models.
+          There are 2 type of models
+          i.language models(llm text-> text)
+            a.llms:These are general purpose language models which used for text generation.these are traditionally older models and are not use much now.
+            b. chat models:language models that are specialised for conversational tasks. these are newer models and used frequently than llms.
+          ii.Embedding models(text->vector used for semantic search)
+
+2.prompts: The inputs provided to a llm to guides it output.
+           It is of 2 types: 1.text based prompts 
+                             2.multimodal prompts(text,image,audio,video)
+3.Index: connects your application to external knowledge- such as pdfs,website,databases.
+        i. Document loaders: used to load the document from external source.
+        ii. Text splitter: used to split the document into chunks which then converted to vectors.
+        iii. Vector DB: store the vectors.
+        iv. retriver: generate the embedding of the query,make a semantic search using these embeddings in vector DB and get the relivant result.
+
+4.memory: llms are stateless but with the help of langchain we can implement memory to llm.there mainly 4 type of memory.
+         i. ConversationBufforMemory: stores a transcript of recent messages.great for short chats but can be grow quickly.
+         ii. ConversationBufforWindowMemory: only keeps the last N interactions to avoid excessive token usages.
+         iii.Summerizer-Based Memory: send the summery of our entire chat for saving tokens.
+         iv.custom memory: for advance use cases wee can store specialized text.
+
+5.AI agents: unlike traditional chatbots it have reasoning capability and tool callings.
