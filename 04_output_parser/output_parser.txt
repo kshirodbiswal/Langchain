@@ -1,0 +1,9 @@
+The four key types of output parsers in LangChain:
+
+String Output Parser: The simplest parser, used to extract clean string content from an LLM's response, especially useful within chains to streamline data flow between prompt templates and models.
+
+JSON Output Parser: Forces the LLM to return data in a JSON format. While quick, it does not enforce a specific schema, meaning the structure can vary.
+
+Structured Output Parser: Allows developers to enforce a specific schema on the LLM's output using ResponseSchema, ensuring the returned JSON follows a predefined structure.
+
+Pydantic Output Parser: The most robust option, using Pydantic models to enforce both the schema and data validation (e.g., ensuring an age field is an integer greater than 18), providing strict type safety and error checking.
